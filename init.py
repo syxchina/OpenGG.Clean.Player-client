@@ -185,13 +185,14 @@ def patch(opcodePath,patchPath):
 
 def clean(path):
     for fileName in os.listdir(path) :
-        filePath = path+fileName
-        debug('Removing '+fileName)
-        if os.path.isdir(filePath):
-            shutil.rmtree(filePath)
-        else:
-            os.remove(filePath)
-        continue
+        if(fileName[0]!='.'):
+            filePath = path+fileName
+            debug('Removing '+fileName)
+            if os.path.isdir(filePath):
+                shutil.rmtree(filePath)
+            else:
+                os.remove(filePath)
+            continue
 def mklink(link, target):
     absLink = os.path.abspath(link)
     absTarget = os.path.abspath(target)
@@ -225,6 +226,9 @@ linkObj = open(linkFile)
 links = json.load(linkObj)
 for linkName in links:
     if not os.path.exists(binPath+linkName):
+        linkFile = binPath+linkName
+        targetFile = RABCDAsmPath+linkName
+        info('Linking {link} ==> {target}'.format(link=linkFile, target=targetFile))
         mklink(binPath+linkName, RABCDAsmPath+linkName)
 info('Preparing SWF files',0)
 if confirm('Do you want to update the swf files?') :

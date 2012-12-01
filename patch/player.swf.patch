@@ -1,6 +1,7 @@
-diff -u -r ./com/youku/data/PlayerConstant.class.asasm ../player-0/com/youku/data/PlayerConstant.class.asasm
---- ./com/youku/data/PlayerConstant.class.asasm	2012-11-26 23:53:46.159985300 +0800
-+++ ../player-0/com/youku/data/PlayerConstant.class.asasm	2012-11-26 21:54:07.418194300 +0800
+Only in D:\wamp\www\player-0: .git
+diff -u -r ./com/youku/data/PlayerConstant.class.asasm D:\wamp\www\player-0/com/youku/data/PlayerConstant.class.asasm
+--- ./com/youku/data/PlayerConstant.class.asasm	2012-12-01 17:12:55.102978000 +0800
++++ D:\wamp\www\player-0/com/youku/data/PlayerConstant.class.asasm	2012-12-01 16:50:25.640408100 +0800
 @@ -96,7 +96,8 @@
      initproperty        QName(PackageNamespace(""), "SPECIAL_TYPE_SHENHE")
  
@@ -46,9 +47,9 @@ diff -u -r ./com/youku/data/PlayerConstant.class.asasm ../player-0/com/youku/dat
 + trait const QName(PackageNamespace(""), "HACK_LINK") slotid 23 type QName(PackageNamespace(""), "String") value Utf8("http://opengg.me/781/opengg-clean-player/") end
 + trait const QName(PackageNamespace(""), "HACK_PLAYER_PROXY") slotid 24 type QName(PackageNamespace(""), "String") value Utf8("player.opengg.me") end
  end ; class
-diff -u -r ./com/youku/data/PlayerData.class.asasm ../player-0/com/youku/data/PlayerData.class.asasm
---- ./com/youku/data/PlayerData.class.asasm	2012-11-26 23:53:46.159985300 +0800
-+++ ../player-0/com/youku/data/PlayerData.class.asasm	2012-11-26 22:06:57.011574800 +0800
+diff -u -r ./com/youku/data/PlayerData.class.asasm D:\wamp\www\player-0/com/youku/data/PlayerData.class.asasm
+--- ./com/youku/data/PlayerData.class.asasm	2012-12-01 17:12:55.092978700 +0800
++++ D:\wamp\www\player-0/com/youku/data/PlayerData.class.asasm	2012-12-01 16:50:25.650409000 +0800
 @@ -2157,7 +2157,8 @@
        setlocal1
  
@@ -74,9 +75,9 @@ diff -u -r ./com/youku/data/PlayerData.class.asasm ../player-0/com/youku/data/Pl
        setlocal1
  
        getlocal1
-diff -u -r ./com/youku/PlayerShell.class.asasm ../player-0/com/youku/PlayerShell.class.asasm
---- ./com/youku/PlayerShell.class.asasm	2012-11-26 23:53:45.925982800 +0800
-+++ ../player-0/com/youku/PlayerShell.class.asasm	2012-11-26 21:59:06.027046200 +0800
+diff -u -r ./com/youku/PlayerShell.class.asasm D:\wamp\www\player-0/com/youku/PlayerShell.class.asasm
+--- ./com/youku/PlayerShell.class.asasm	2012-12-01 17:12:54.812970200 +0800
++++ D:\wamp\www\player-0/com/youku/PlayerShell.class.asasm	2012-12-01 16:50:25.660409800 +0800
 @@ -463,7 +463,13 @@
        pushscope
  
@@ -99,7 +100,7 @@ diff -u -r ./com/youku/PlayerShell.class.asasm ../player-0/com/youku/PlayerShell
 +      getlocal1
 +      getlex              QName(PackageNamespace("flash.events"), "ContextMenuEvent")
 +      getproperty         QName(PackageNamespace(""), "MENU_ITEM_SELECT")
-+      getlex         QName(PackageNamespace("com.youku"), "PlayerShell")
++      getlex              QName(PackageNamespace("com.youku"), "PlayerShell")
 +      getproperty         QName(PackageNamespace(""), "onVersionItemSelect")
 +      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 +
@@ -133,9 +134,9 @@ diff -u -r ./com/youku/PlayerShell.class.asasm ../player-0/com/youku/PlayerShell
 +  end ; method
 + end ; trait
  end ; class
-diff -u -r ./com/youku/plugins/ads/model/ADProxy.class.asasm ../player-0/com/youku/plugins/ads/model/ADProxy.class.asasm
---- ./com/youku/plugins/ads/model/ADProxy.class.asasm	2012-11-26 23:53:46.581189200 +0800
-+++ ../player-0/com/youku/plugins/ads/model/ADProxy.class.asasm	2012-11-26 22:09:09.482983900 +0800
+diff -u -r ./com/youku/plugins/ads/model/ADProxy.class.asasm D:\wamp\www\player-0/com/youku/plugins/ads/model/ADProxy.class.asasm
+--- ./com/youku/plugins/ads/model/ADProxy.class.asasm	2012-12-01 17:12:55.537991400 +0800
++++ D:\wamp\www\player-0/com/youku/plugins/ads/model/ADProxy.class.asasm	2012-12-01 16:50:25.670410100 +0800
 @@ -47,6 +47,7 @@
       initscopedepth 4
       maxscopedepth 5
@@ -144,9 +145,9 @@ diff -u -r ./com/youku/plugins/ads/model/ADProxy.class.asasm ../player-0/com/you
        getlocal0
        pushscope
  
-diff -u -r ./com/youku/plugins/ads/model/FrontProxy.class.asasm ../player-0/com/youku/plugins/ads/model/FrontProxy.class.asasm
---- ./com/youku/plugins/ads/model/FrontProxy.class.asasm	2012-11-26 23:53:46.643591000 +0800
-+++ ../player-0/com/youku/plugins/ads/model/FrontProxy.class.asasm	2012-11-26 22:10:14.885877000 +0800
+diff -u -r ./com/youku/plugins/ads/model/FrontProxy.class.asasm D:\wamp\www\player-0/com/youku/plugins/ads/model/FrontProxy.class.asasm
+--- ./com/youku/plugins/ads/model/FrontProxy.class.asasm	2012-12-01 17:12:55.632993500 +0800
++++ D:\wamp\www\player-0/com/youku/plugins/ads/model/FrontProxy.class.asasm	2012-12-01 16:50:25.685410300 +0800
 @@ -320,7 +320,8 @@
        findpropstrict      QName(PackageNamespace("flash.utils"), "setTimeout")
        getlocal0
@@ -157,9 +158,9 @@ diff -u -r ./com/youku/plugins/ads/model/FrontProxy.class.asasm ../player-0/com/
        callproperty        QName(PackageNamespace("flash.utils"), "setTimeout"), 2
        dup
        setlocal            10
-diff -u -r ./com/youku/plugins/ads/view/FrontMediator.class.asasm ../player-0/com/youku/plugins/ads/view/FrontMediator.class.asasm
---- ./com/youku/plugins/ads/view/FrontMediator.class.asasm	2012-11-26 23:53:46.627990300 +0800
-+++ ../player-0/com/youku/plugins/ads/view/FrontMediator.class.asasm	2012-11-26 22:11:34.195335200 +0800
+diff -u -r ./com/youku/plugins/ads/view/FrontMediator.class.asasm D:\wamp\www\player-0/com/youku/plugins/ads/view/FrontMediator.class.asasm
+--- ./com/youku/plugins/ads/view/FrontMediator.class.asasm	2012-12-01 17:12:55.627993600 +0800
++++ D:\wamp\www\player-0/com/youku/plugins/ads/view/FrontMediator.class.asasm	2012-12-01 16:50:25.695409600 +0800
 @@ -3096,11 +3096,13 @@
        convert_d
        setlocal1
@@ -179,9 +180,9 @@ diff -u -r ./com/youku/plugins/ads/view/FrontMediator.class.asasm ../player-0/co
        ifnlt               L40
  
        pushbyte            0
-diff -u -r ./com/youku/plugins/endcard/view/OneKeyShare.class.asasm ../player-0/com/youku/plugins/endcard/view/OneKeyShare.class.asasm
---- ./com/youku/plugins/endcard/view/OneKeyShare.class.asasm	2012-11-26 23:53:48.968015500 +0800
-+++ ../player-0/com/youku/plugins/endcard/view/OneKeyShare.class.asasm	2012-11-26 22:52:38.104438100 +0800
+diff -u -r ./com/youku/plugins/endcard/view/OneKeyShare.class.asasm D:\wamp\www\player-0/com/youku/plugins/endcard/view/OneKeyShare.class.asasm
+--- ./com/youku/plugins/endcard/view/OneKeyShare.class.asasm	2012-12-01 17:12:58.103068300 +0800
++++ D:\wamp\www\player-0/com/youku/plugins/endcard/view/OneKeyShare.class.asasm	2012-12-01 16:50:25.710411800 +0800
 @@ -132,7 +132,13 @@
        coerce_s
        setlocal            7
@@ -197,9 +198,9 @@ diff -u -r ./com/youku/plugins/endcard/view/OneKeyShare.class.asasm ../player-0/
        getlocal0
        getproperty         QName(PrivateNamespace(null, "com.youku.plugins.endcard.view:OneKeyShare#0"), "_data")
        getproperty         QName(Namespace("com.youku.interfaces:IPlayerData"), "videoIdEncode")
-diff -u -r ./com/youku/plugins/menu/view/ContextMenuMediator.class.asasm ../player-0/com/youku/plugins/menu/view/ContextMenuMediator.class.asasm
---- ./com/youku/plugins/menu/view/ContextMenuMediator.class.asasm	2012-11-26 23:53:48.234806500 +0800
-+++ ../player-0/com/youku/plugins/menu/view/ContextMenuMediator.class.asasm	2012-11-26 22:02:33.017738300 +0800
+diff -u -r ./com/youku/plugins/menu/view/ContextMenuMediator.class.asasm D:\wamp\www\player-0/com/youku/plugins/menu/view/ContextMenuMediator.class.asasm
+--- ./com/youku/plugins/menu/view/ContextMenuMediator.class.asasm	2012-12-01 17:12:57.258043000 +0800
++++ D:\wamp\www\player-0/com/youku/plugins/menu/view/ContextMenuMediator.class.asasm	2012-12-01 16:50:25.715410200 +0800
 @@ -167,7 +167,13 @@
  
        getlocal0
@@ -222,7 +223,7 @@ diff -u -r ./com/youku/plugins/menu/view/ContextMenuMediator.class.asasm ../play
 +      getproperty         QName(PrivateNamespace(null, "com.youku.plugins.menu.view:ContextMenuMediator"), "_versionItem")
 +      getlex              QName(PackageNamespace("flash.events"), "ContextMenuEvent")
 +      getproperty         QName(PackageNamespace(""), "MENU_ITEM_SELECT")
-+      getlex         QName(PackageNamespace("com.youku"), "PlayerShell")
++      getlex              QName(PackageNamespace("com.youku"), "PlayerShell")
 +      getproperty         QName(PackageNamespace(""), "onVersionItemSelect")
 +      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 +
@@ -230,9 +231,9 @@ diff -u -r ./com/youku/plugins/menu/view/ContextMenuMediator.class.asasm ../play
        getproperty         QName(PrivateNamespace(null, "com.youku.plugins.menu.view:ContextMenuMediator"), "_contextMenu")
        getproperty         QName(PackageNamespace(""), "customItems")
        getlocal0
-diff -u -r ./com/youku/plugins/report/model/ReportProxy.class.asasm ../player-0/com/youku/plugins/report/model/ReportProxy.class.asasm
---- ./com/youku/plugins/report/model/ReportProxy.class.asasm	2012-11-26 23:53:47.751201300 +0800
-+++ ../player-0/com/youku/plugins/report/model/ReportProxy.class.asasm	2012-11-26 23:09:37.253734100 +0800
+diff -u -r ./com/youku/plugins/report/model/ReportProxy.class.asasm D:\wamp\www\player-0/com/youku/plugins/report/model/ReportProxy.class.asasm
+--- ./com/youku/plugins/report/model/ReportProxy.class.asasm	2012-12-01 17:12:56.718027700 +0800
++++ D:\wamp\www\player-0/com/youku/plugins/report/model/ReportProxy.class.asasm	2012-12-01 16:59:24.216211600 +0800
 @@ -266,6 +266,7 @@
       initscopedepth 4
       maxscopedepth 5
@@ -249,7 +250,7 @@ diff -u -r ./com/youku/plugins/report/model/ReportProxy.class.asasm ../player-0/
        getlocal0
        pushscope
  
-@@ -943,6 +945,7 @@
+@@ -797,6 +799,7 @@
       initscopedepth 4
       maxscopedepth 5
       code
@@ -257,7 +258,7 @@ diff -u -r ./com/youku/plugins/report/model/ReportProxy.class.asasm ../player-0/
        getlocal0
        pushscope
  
-@@ -3138,6 +3141,7 @@
+@@ -943,6 +946,7 @@
       initscopedepth 4
       maxscopedepth 5
       code
@@ -265,7 +266,7 @@ diff -u -r ./com/youku/plugins/report/model/ReportProxy.class.asasm ../player-0/
        getlocal0
        pushscope
  
-@@ -3275,6 +3279,7 @@
+@@ -1045,6 +1049,7 @@
       initscopedepth 4
       maxscopedepth 5
       code
@@ -273,7 +274,7 @@ diff -u -r ./com/youku/plugins/report/model/ReportProxy.class.asasm ../player-0/
        getlocal0
        pushscope
  
-@@ -3468,6 +3473,7 @@
+@@ -1130,6 +1135,7 @@
       initscopedepth 4
       maxscopedepth 5
       code
@@ -281,7 +282,7 @@ diff -u -r ./com/youku/plugins/report/model/ReportProxy.class.asasm ../player-0/
        getlocal0
        pushscope
  
-@@ -3744,6 +3750,7 @@
+@@ -1216,6 +1222,7 @@
       initscopedepth 4
       maxscopedepth 5
       code
@@ -289,9 +290,129 @@ diff -u -r ./com/youku/plugins/report/model/ReportProxy.class.asasm ../player-0/
        getlocal0
        pushscope
  
-diff -u -r ./com/youku/plugins/report/view/ReportMediator.class.asasm ../player-0/com/youku/plugins/report/view/ReportMediator.class.asasm
---- ./com/youku/plugins/report/view/ReportMediator.class.asasm	2012-11-26 23:53:47.657601100 +0800
-+++ ../player-0/com/youku/plugins/report/view/ReportMediator.class.asasm	2012-11-26 22:57:36.597393300 +0800
+@@ -1287,6 +1294,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -1422,6 +1430,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -1642,6 +1651,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -1931,6 +1941,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -2017,6 +2028,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -2158,6 +2170,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -2959,6 +2972,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -3061,6 +3075,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -3138,6 +3153,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -3275,6 +3291,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -3349,6 +3366,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -3468,6 +3486,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -3744,6 +3763,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -3839,6 +3859,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+@@ -3987,6 +4008,7 @@
+      initscopedepth 4
+      maxscopedepth 5
+      code
++      returnvoid
+       getlocal0
+       pushscope
+ 
+diff -u -r ./com/youku/plugins/report/view/ReportMediator.class.asasm D:\wamp\www\player-0/com/youku/plugins/report/view/ReportMediator.class.asasm
+--- ./com/youku/plugins/report/view/ReportMediator.class.asasm	2012-12-01 17:12:56.698026600 +0800
++++ D:\wamp\www\player-0/com/youku/plugins/report/view/ReportMediator.class.asasm	2012-12-01 16:50:25.765412200 +0800
 @@ -58,6 +58,7 @@
       initscopedepth 4
       maxscopedepth 5
@@ -300,9 +421,9 @@ diff -u -r ./com/youku/plugins/report/view/ReportMediator.class.asasm ../player-
        getlocal0
        pushscope
  
-diff -u -r ./com/youku/plugins/searchBar/view/SearchBarMediator.class.asasm ../player-0/com/youku/plugins/searchBar/view/SearchBarMediator.class.asasm
---- ./com/youku/plugins/searchBar/view/SearchBarMediator.class.asasm	2012-11-26 23:53:47.439199300 +0800
-+++ ../player-0/com/youku/plugins/searchBar/view/SearchBarMediator.class.asasm	2012-11-26 23:32:22.077462700 +0800
+diff -u -r ./com/youku/plugins/searchBar/view/SearchBarMediator.class.asasm D:\wamp\www\player-0/com/youku/plugins/searchBar/view/SearchBarMediator.class.asasm
+--- ./com/youku/plugins/searchBar/view/SearchBarMediator.class.asasm	2012-12-01 17:12:56.408016800 +0800
++++ D:\wamp\www\player-0/com/youku/plugins/searchBar/view/SearchBarMediator.class.asasm	2012-12-01 16:50:25.780411900 +0800
 @@ -626,7 +626,13 @@
        coerce_s
        setlocal            6
@@ -425,9 +546,9 @@ diff -u -r ./com/youku/plugins/searchBar/view/SearchBarMediator.class.asasm ../p
        coerce_s
        setlocal2
  
-diff -u -r ./com/youku/plugins/share/view/components/IconList.class.asasm ../player-0/com/youku/plugins/share/view/components/IconList.class.asasm
---- ./com/youku/plugins/share/view/components/IconList.class.asasm	2012-11-26 23:53:48.890014000 +0800
-+++ ../player-0/com/youku/plugins/share/view/components/IconList.class.asasm	2012-11-26 23:43:30.837101200 +0800
+diff -u -r ./com/youku/plugins/share/view/components/IconList.class.asasm D:\wamp\www\player-0/com/youku/plugins/share/view/components/IconList.class.asasm
+--- ./com/youku/plugins/share/view/components/IconList.class.asasm	2012-12-01 17:12:57.983063700 +0800
++++ D:\wamp\www\player-0/com/youku/plugins/share/view/components/IconList.class.asasm	2012-12-01 16:50:25.795413100 +0800
 @@ -117,7 +117,13 @@
        coerce_s
        setlocal            4
@@ -612,9 +733,9 @@ diff -u -r ./com/youku/plugins/share/view/components/IconList.class.asasm ../pla
        newobject           3
        callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
  
-diff -u -r ./com/youku/plugins/share/view/components/SharePanel.class.asasm ../player-0/com/youku/plugins/share/view/components/SharePanel.class.asasm
---- ./com/youku/plugins/share/view/components/SharePanel.class.asasm	2012-11-26 23:53:48.453208300 +0800
-+++ ../player-0/com/youku/plugins/share/view/components/SharePanel.class.asasm	2012-11-26 23:45:18.958816400 +0800
+diff -u -r ./com/youku/plugins/share/view/components/SharePanel.class.asasm D:\wamp\www\player-0/com/youku/plugins/share/view/components/SharePanel.class.asasm
+--- ./com/youku/plugins/share/view/components/SharePanel.class.asasm	2012-12-01 17:12:57.513049400 +0800
++++ D:\wamp\www\player-0/com/youku/plugins/share/view/components/SharePanel.class.asasm	2012-12-01 16:50:25.805412900 +0800
 @@ -502,7 +502,13 @@
  
        getlocal0
@@ -645,9 +766,9 @@ diff -u -r ./com/youku/plugins/share/view/components/SharePanel.class.asasm ../p
        getlocal0
        getproperty         QName(PrivateNamespace(null, "com.youku.plugins.share.view.components:SharePanel"), "_playerProxy")
        getproperty         QName(Namespace("com.youku.interfaces:IPlayerProxy"), "playerData")
-diff -u -r ./com/youku/RootDataParser.class.asasm ../player-0/com/youku/RootDataParser.class.asasm
---- ./com/youku/RootDataParser.class.asasm	2012-11-26 23:53:46.066383100 +0800
-+++ ../player-0/com/youku/RootDataParser.class.asasm	2012-11-26 23:49:51.052836500 +0800
+diff -u -r ./com/youku/RootDataParser.class.asasm D:\wamp\www\player-0/com/youku/RootDataParser.class.asasm
+--- ./com/youku/RootDataParser.class.asasm	2012-12-01 17:12:54.987975300 +0800
++++ D:\wamp\www\player-0/com/youku/RootDataParser.class.asasm	2012-12-01 16:50:25.820413600 +0800
 @@ -598,20 +598,24 @@
       pushfalse
       setproperty         QName(PackageNamespace(""), "showTHX")
@@ -681,3 +802,4 @@ diff -u -r ./com/youku/RootDataParser.class.asasm ../player-0/com/youku/RootData
       ifne                L437
  
       getlocal2
+Only in D:\wamp\www\player-0: player-0.main.abc
