@@ -164,6 +164,16 @@ def abcreplace(file, abcFile):
     if len(stdout)>0 or len(stderr)>0:
         raise Exception([stdout,stderr,p.returncode])
 
+def swfbinreplace(file, index, replace):
+    p = subprocess.Popen(
+        [binPath+'swfbinreplace', file, index, replace],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE
+        )
+    stdout, stderr = p.communicate()
+    if len(stdout)>0 or len(stderr)>0:
+        raise Exception([stdout,stderr,p.returncode])
+
 def patch(opcodePath,patchPath):
     if not os.path.exists(patchPath) :
         debug(patchPath+' not exists')
@@ -246,6 +256,9 @@ if confirm('Do you want to update the swf files?') :
             ))
         download(url, filePath)
 
+info('Cleaning '+tempPath, 0)
+clean(tempPath)
+
 info('Processing SWF files',0)
 prompt = '''
     Flash Players get updated frequently, so the patches inside "src"
@@ -255,9 +268,6 @@ prompt = '''
     '''
 if not confirm(prompt):
     sys.exit()
-
-info('Cleaning '+tempPath)
-clean(tempPath)
 
 for fileName in os.listdir(inputPath) :
     filePath = inputPath+fileName
@@ -288,5 +298,19 @@ for fileName in os.listdir(inputPath) :
     shutil.move(newFilePath, outputPath+fileName)
     info('SWF file move to output: '+newFilePath)
 
-info('Cleaning '+tempPath)
+info('Replacing bin in SWF files',0)
+for fileName in os.listdir(inputPath) :
+    matches = re.search('^(.*)\.(\d+)\.replace\.swf$', fileName)
+    if matches:
+        swfFile = outputPath+matches.group(1)
+        replaceFile = outputPath+fileName
+        index = matches.group(2)
+        info('Replacing {swfFile} ({index}): {replaceFile}'.format(
+                swfFile = swfFile,
+                index = index,
+                replaceFile = replaceFile
+            ))
+        swfbinreplace(swfFile, index, replaceFile)
+
+info('Cleaning '+tempPath, 0)
 clean(tempPath)
