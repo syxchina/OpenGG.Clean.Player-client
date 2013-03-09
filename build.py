@@ -261,7 +261,7 @@ clean(tempPath)
 
 info('Processing SWF files',0)
 prompt = '''
-    Flash Players get updated frequently, so the patches inside "src"
+    Flash Players get updated frequently, so the patches inside "patch"
     folder may be outdated and not suitable for the current version.
     Applying these patches can lead to all kinds of unpredictable bugs.
     Do you still want to proceed?
