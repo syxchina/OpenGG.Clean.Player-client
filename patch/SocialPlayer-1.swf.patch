@@ -1,23 +1,23 @@
-From 9c91578aa3e379769cb2fbab6afd9a40b262fa72 Mon Sep 17 00:00:00 2001
-From: OpenGG
-Date: Tue, 12 Mar 2013 11:49:25 +0800
+From 0cbfc6c517e7fccc6f27c61e191d78bc97748622 Mon Sep 17 00:00:00 2001
+From: OpenGG <liy099@gmail.com>
+Date: Tue, 12 Mar 2013 15:02:07 +0800
 Subject: [PATCH] final
 
 ---
- PortalPlayer-1-0.main.asasm                                |   1 +
- com/youku/utils/OpenWindow.class.asasm                     | 717 +++++++++++++++++++++
- com/youku/utils/OpenWindow.script.asasm                    |  29 +
- tudou/centralModule/CentralControllerForMain.class.asasm   |  11 -
- tudou/logModule/core/TdLog.class.asasm                     |   1 +
- tudouPlayer.class.asasm                                    |  75 +--
- 6 files changed, 777 insertions(+), 57 deletions(-)
+ SocialPlayer-1-0.main.asasm                       |   1 +
+ com/youku/utils/OpenWindow.class.asasm            | 717 ++++++++++++++++++++++
+ com/youku/utils/OpenWindow.script.asasm           |  29 +
+ tudou/centralModule/CentralController.class.asasm |  12 -
+ tudou/logModule/core/TdLog.class.asasm            |   1 +
+ tudouPlayer.class.asasm                           |  75 +--
+ 6 files changed, 777 insertions(+), 58 deletions(-)
  create mode 100644 com/youku/utils/OpenWindow.class.asasm
  create mode 100644 com/youku/utils/OpenWindow.script.asasm
 
-diff --git a/PortalPlayer-1-0.main.asasm b/PortalPlayer-1-0.main.asasm
-index 535a5e8..7e91e35 100644
---- a/PortalPlayer-1-0.main.asasm
-+++ b/PortalPlayer-1-0.main.asasm
+diff --git a/SocialPlayer-1-0.main.asasm b/SocialPlayer-1-0.main.asasm
+index 7b3fc94..2f40c71 100644
+--- a/SocialPlayer-1-0.main.asasm
++++ b/SocialPlayer-1-0.main.asasm
 @@ -4,6 +4,7 @@ program
   majorversion 46
  
@@ -784,11 +784,11 @@ index 0000000..7aaf030
 +  #include "OpenWindow.class.asasm"
 + end ; trait
 +end ; script
-diff --git a/tudou/centralModule/CentralControllerForMain.class.asasm b/tudou/centralModule/CentralControllerForMain.class.asasm
-index f1d2d07..a86b6cf 100644
---- a/tudou/centralModule/CentralControllerForMain.class.asasm
-+++ b/tudou/centralModule/CentralControllerForMain.class.asasm
-@@ -2393,18 +2393,7 @@ L40:
+diff --git a/tudou/centralModule/CentralController.class.asasm b/tudou/centralModule/CentralController.class.asasm
+index e5e888c..db2dd1b 100644
+--- a/tudou/centralModule/CentralController.class.asasm
++++ b/tudou/centralModule/CentralController.class.asasm
+@@ -1518,18 +1518,6 @@ L38:
        jump                L24
  
  L10:
@@ -797,7 +797,7 @@ index f1d2d07..a86b6cf 100644
 -      getproperty         QName(PackageNamespace(""), "p2pModule")
 -      getproperty         QName(Namespace("tudou.videoModule.p2p:IP2PModule"), "isSupport")
 -      iffalse             L20
- 
+-
 -      findproperty        QName(PackageNamespace(""), "video")
 -      findpropstrict      QName(PackageNamespace("tudou.videoModule"), "P2PVideoPlayer")
 -      constructprop       QName(PackageNamespace("tudou.videoModule"), "P2PVideoPlayer"), 0
@@ -820,10 +820,10 @@ index fd628ea..801ba90 100644
        pushscope
  
 diff --git a/tudouPlayer.class.asasm b/tudouPlayer.class.asasm
-index 51fa524..f194bba 100644
+index 17a69d6..d947c21 100644
 --- a/tudouPlayer.class.asasm
 +++ b/tudouPlayer.class.asasm
-@@ -576,52 +576,6 @@ L103:
+@@ -541,52 +541,6 @@ L113:
        getproperty         QName(PrivateNamespace(null, "tudouPlayer"), "controller")
        callpropvoid        QName(PackageNamespace(""), "addChild"), 1
  
@@ -834,7 +834,7 @@ index 51fa524..f194bba 100644
 -      getproperty         QName(PrivateNamespace(null, "tudouPlayer"), "USERNAME")
 -      equals
 -      dup
--      iftrue              L148
+-      iftrue              L136
 -
 -      pop
 -      getlex              QName(PackageNamespace("tudou.centralModule"), "PublicVar")
@@ -843,8 +843,8 @@ index 51fa524..f194bba 100644
 -      getlocal0
 -      getproperty         QName(PrivateNamespace(null, "tudouPlayer"), "PINCODE")
 -      equals
--L148:
--      iftrue              L174
+-L136:
+-      iftrue              L162
 -
 -      getlex              QName(PackageNamespace("tudou.tools"), "SWZLoaderHelper")
 -      callproperty        QName(PackageNamespace(""), "getInstance"), 0
@@ -873,10 +873,10 @@ index 51fa524..f194bba 100644
 -      newarray            2
 -      callpropvoid        QName(PackageNamespace(""), "send"), 2
 -
- L174:
+ L162:
        getlex              QName(PackageNamespace("tudou.tools"), "SWZLoaderHelper")
        callproperty        QName(PackageNamespace(""), "getInstance"), 0
-@@ -721,6 +675,27 @@ L14:
+@@ -686,6 +640,27 @@ L14:
      end ; body
     end ; method
    end ; trait
@@ -904,7 +904,7 @@ index 51fa524..f194bba 100644
    trait const QName(PrivateNamespace(null, "tudouPlayer"), "USERNAME") type QName(PackageNamespace(""), "String") value Utf8("zombie") end
    trait method QName(PrivateNamespace(null, "tudouPlayer"), "stageResizeHandler")
     method
-@@ -939,12 +914,14 @@ L120:
+@@ -904,12 +879,14 @@ L120:
        getlocal0
        pushscope
  
@@ -919,7 +919,7 @@ index 51fa524..f194bba 100644
        setlocal1
  
        getlocal0
-@@ -972,6 +949,12 @@ L18:
+@@ -937,6 +914,12 @@ L18:
        coerce              QName(PackageNamespace("flash.ui"), "ContextMenuItem")
        setlocal3
  
