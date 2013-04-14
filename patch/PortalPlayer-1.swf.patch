@@ -4,12 +4,12 @@ Date: Tue, 12 Mar 2013 11:49:25 +0800
 Subject: [PATCH] final
 
 ---
- PortalPlayer-1-0.main.asasm                                |   1 +
- com/youku/utils/OpenWindow.class.asasm                     | 717 +++++++++++++++++++++
- com/youku/utils/OpenWindow.script.asasm                    |  29 +
- tudou/centralModule/CentralControllerForMain.class.asasm   |  11 -
- tudou/logModule/core/TdLog.class.asasm                     |   1 +
- tudouPlayer.class.asasm                                    |  75 +--
+ PortalPlayer-1-0.main.asasm                        |   1 +
+ com/youku/utils/OpenWindow.class.asasm             | 717 +++++++++++++++++++++
+ com/youku/utils/OpenWindow.script.asasm            |  29 +
+ .../CentralControllerForMain.class.asasm           |  11 -
+ tudou/logModule/core/TdLog.class.asasm             |   1 +
+ tudouPlayer.class.asasm                            |  75 +--
  6 files changed, 777 insertions(+), 57 deletions(-)
  create mode 100644 com/youku/utils/OpenWindow.class.asasm
  create mode 100644 com/youku/utils/OpenWindow.script.asasm
